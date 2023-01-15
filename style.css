@@ -160,11 +160,7 @@ header > .head-container > img {
 
 .experience > .experience-right > img {
   flex: 1;
-  width: 33rem;
-  align-self: flex-end;
-  position: absolute;
-  top: 0;
-  right: 0;
+  width: 100%;
 }
 
 .experience > .experience-right > button {
