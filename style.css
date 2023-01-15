@@ -153,8 +153,8 @@ header > .head-container > img {
 }
 
 .experience > .experience-right {
-  width: 35rem;
-  height: 48rem;
+  width: 100%;
+  flex: 1;
   position: relative;
 }
 
@@ -372,10 +372,6 @@ footer > p {
     text-align: center;
   }
 
-  .experience > .experience-left {
-    flex: 1;
-  }
-
   .experience > .experience-left > .box {
     padding: 1rem;
     width: 94%;
@@ -383,8 +379,8 @@ footer > p {
   }
 
   .experience > .experience-right {
-    flex: 1;
     width: 400px;
+    height: 700px;
   }
 
   .experience > .experience-right > img {
