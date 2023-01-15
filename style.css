@@ -293,7 +293,7 @@ footer > p {
 
 /* responsive design start here */
 
-@media screen and (max-width: 776px) {
+@media screen and (max-width: 768px) {
   p {
     font-size: 10px;
     width: 90%;
