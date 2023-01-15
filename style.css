@@ -4,6 +4,7 @@
   font-family: "Work Sans", sans-serif;
 }
 
+/* for common uses */
 button {
   width: 8rem;
   height: 2.5rem;
@@ -30,7 +31,7 @@ p {
   color: #727272;
   font-size: 14px;
 }
-
+/* ====================== */
 /* header start from here */
 header {
   background-color: #ff900e1a;
@@ -58,7 +59,7 @@ header > nav > ul > li:hover {
 }
 
 header > .head-container {
-  /*text-align: center;*/
+  text-align: center;
 
   display: flex;
   flex-direction: column;
@@ -70,11 +71,6 @@ header > .head-container {
 header > .head-container > h1 {
   font-size: 35px;
 }
-
-/*header > .head-container > p {
-  color: #727272;
-  font-size: 14px;
-}*/
 
 header > .head-container > img {
   width: 100%;
@@ -97,7 +93,7 @@ header > .head-container > img {
 }
 
 .features > .feature-left > img {
-  width: 16rem;
+  width: 100%;
 }
 
 .features > .feature-right {
@@ -115,11 +111,6 @@ header > .head-container > img {
   color: #ff900e;
 }
 
-/*.features > .feature-right > p {
-  color: #727272;
-  font-size: 14px;
-}*/
-
 /* features class ends here */
 
 /* experience class start here */
@@ -134,6 +125,11 @@ header > .head-container > img {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.experience > .experience-left > h1 {
+  border-left: 4px solid #ff900e;
+  padding-left: 1rem;
 }
 
 .experience > .experience-left > p {
@@ -249,6 +245,43 @@ header > .head-container > img {
 }
 
 /* sponsor class ends here */
+/* offer class start here */
+.offer {
+  margin: 4rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.offer > h1 {
+  text-align: center;
+}
+
+.offer > h1 > span {
+  color: #ff900e;
+}
+
+.offer > .offer-points {
+  border-left: 2px solid #ff900e;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.197);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 1rem;
+}
+
+.offer > .offer-points > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.offer > .offer-points > ul > li > i {
+  color: #727272;
+}
+
 /* footer start here */
 footer {
   margin: 4rem 6rem;
@@ -262,14 +295,18 @@ footer > p {
   justify-content: center;
 }
 
+/* responsive design start here */
+
 @media screen and (max-width: 776px) {
   p {
     font-size: 10px;
-    width: 100%;
+    width: 90%;
   }
+
+  /* for responsive header */
   header {
-    padding: 2rem 1rem;
-    width: 100%;
+    width: 94%;
+    padding: 1rem 1rem;
   }
   header > nav {
     flex-direction: column;
@@ -282,9 +319,9 @@ footer > p {
   }
   header > .head-container {
     text-align: justify;
-    align-items: flex-start;
-    justify-content: start;
-    /*width: 60%;*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 1rem;
   }
 
@@ -296,32 +333,54 @@ footer > p {
     width: 100%;
   }
 
-  /*header > .head-container > p {
-    font-size: 10px;
-  }*/
-
-  main > .features {
+  /* for responsive feature */
+  .features {
     margin: 2rem 1rem;
-    width: 100%;
-    grid-template-columns: auto;
+    width: 94%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 0rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 
-  main > .features > .feature-left {
+  .features > .feature-left {
     grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
   }
 
   .features > .feature-left > img {
     width: 100%;
   }
+
+  .features > .feature-right {
+    width: 94%;
+    margin: 2rem 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* for responsive experience */
   .experience {
     margin: 2rem 1rem;
+    /*margin: 0;*/
     flex-direction: column;
-    width: 100%;
+    width: 94%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
+
+  .experience > .experience-left > .box {
+    padding: 1rem;
+    width: 94%;
+    text-align: left;
+  }
+
   .experience > .experience-right {
-    width: 100%;
-    height: 70vh;
-    left: 0;
+    width: 400px;
+    height: 700px;
   }
 
   .experience > .experience-right > img {
@@ -329,16 +388,22 @@ footer > p {
   }
 
   .experience > .experience-right > button {
-    left: 25%;
+    left: 100px;
+    bottom: 20px;
   }
+
+  /* for responsive fact */
   .fact {
     margin: 2rem 1rem;
+    width: 94%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .fact > .fact-contents {
     flex-direction: column;
     gap: 2rem;
-    align-items: baseline;
   }
 
   .fact > .fact-contents > .content {
@@ -348,11 +413,15 @@ footer > p {
   .fact > .fact-contents > .content > p {
     text-align: center;
   }
+
+  /* for responsive sponsor */
   .sponsor {
     margin: 2rem 1rem;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 94%;
   }
 
   .sponsor > .sponsor-contents {
@@ -360,10 +429,22 @@ footer > p {
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    /*width: 100%;*/
   }
+
+  /* for responsive offer */
+  .offer {
+    margin: 2rem 1rem;
+    width: 94%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* for responsive footer */
   footer {
     margin: 2rem 1rem;
-    width: 100%;
+    width: 94%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
