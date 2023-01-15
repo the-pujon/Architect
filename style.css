@@ -392,6 +392,7 @@ footer > p {
   /* for responsive fact */
   .fact {
     margin: 9rem 1rem;
+    margin-bottom: 2rem;
     width: 94%;
     align-items: center;
     justify-content: center;
